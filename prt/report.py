@@ -63,6 +63,7 @@ def build(args):
 
     with open(args.report, "w+") as report_file:
         report_file.write(
+            "Отчет по инструкторам\n" +
             "".join(
                 "{}: количество экзаменов = {}, средняя оценка = {:0.3f}\n".format(
                     name,
