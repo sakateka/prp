@@ -4,7 +4,7 @@
 import json
 import logging
 from collections import defaultdict
-from .classes import Instructor, Student, Exam
+from .classes import Instructor, Student, Exam, ScoreError
 
 LOG = logging.getLogger(__name__)
 
@@ -43,7 +43,7 @@ def collect_results(results_file):
                 current_result += 1
                 try:
                     results.append(parse_one_result(res))
-                except (IndexError, ValueError) as err:
+                except (IndexError, ScoreError) as err:
                     LOG.error("Ошибка при чтении документа %s: %s", current_result, err)
 
     except IOError as exc:

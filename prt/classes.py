@@ -10,6 +10,8 @@ r"""
  | Ученик |  | Инструктор |
  +--------+  +------------+
 """
+from datetime import datetime
+from .exceptions import ScoreError, ExamPropertyError, ExamDateError
 
 class Person():
     """
@@ -76,7 +78,7 @@ class Student(Person):
     def score(self, value):
         """Метод для установки значения оценки"""
         if int(value) < 1 or int(value) > 5:
-            raise ValueError("Score value ({}) out of range 1-5".format(value))
+            raise ScoreError("Score value ({}) out of range 1-5".format(value))
         self._score = value
 
     def __str__(self):
@@ -91,14 +93,37 @@ class Exam():
     """
     Класс представляющий результаты сдачи воздения
     """
-    def __init__(self, instructor, student, date):
-        assert isinstance(instructor, Instructor)
-        assert isinstance(student, Student)
-        self.instructor = instructor
-        self.student = student
-        self.date = date
+    def __init__(self, instructor, student, date_string):
+        if not isinstance(instructor, Instructor):
+            raise ExamPropertyError("Поле инструктор не является классом Instructor")
+        self._instructor = instructor
+
+        if not isinstance(student, Student):
+            raise ExamPropertyError("Поле студент не является классом Student")
+        self._student = student
+
+        try:
+            date = datetime.strptime(date_string, "%d-%m-%YT%H:%M")
+            self._date = date
+        except ValueError as exc:
+            raise ExamDateError("Не верная дата экзамена: {}".format(exc))
+
+    @property
+    def instructor(self):
+        """Неизменяемое поле с объектом Instructor"""
+        return self._instructor
+
+    @property
+    def student(self):
+        """Неизменяемое поле с объектом Student"""
+        return self._student
+
+    @property
+    def date(self):
+        """Возвращаем дату как объект datetime"""
+        return self._date
 
     def __str__(self):
         return "Exam({}, {}, date={})".format(
-            self.instructor, self.student, self.date
+            self.instructor, self.student, self.date.strftime("%FT%H:%M")
         )

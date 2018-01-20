@@ -1,9 +1,9 @@
 [
-    {"date": "10112017", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Иванов Иван Иванович", "age": 18, "score": 5}},
-    {"date": "11112017", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Сидоров Иван Иванович", "age": 19, "score": 4}},
-    {"date": "12112017", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Петров Иван Иванович", "age": 20, "score": 4}},
-    {"date": "10112018", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Иванов Петр Андреевич", "age": 20, "score": 4}},
-    {"date": "11112018", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Сидоров Петр Андреевич", "age": 22, "score": 3}},
-    {"date": "12112018", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Петров Петр Андреевич", "age": 24, "score": 4}},
-    {"date": "13112018", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Петров Петр Андреевич", "age": 24, "score": 6}}
+    {"date": "10-11-2017T12:00", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Иванов Иван Иванович", "age": 18, "score": 5}},
+    {"date": "11-11-2017T16:00", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Сидоров Иван Иванович", "age": 19, "score": 4}},
+    {"date": "12-11-2017T12:33", "instructor": {"name": "Петров Петр Петрович",   "age": 30, "car": "LADA 4x4"},    "student": {"name": "Петров Иван Иванович", "age": 20, "score": 4}},
+    {"date": "10-11-2018T15:07", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Иванов Петр Андреевич", "age": 20, "score": 4}},
+    {"date": "11-11-2018T20:20", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Сидоров Петр Андреевич", "age": 22, "score": 3}},
+    {"date": "12-11-2018T08:11", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Петров Петр Андреевич", "age": 24, "score": 4}},
+    {"date": "13-11-2018T11:11", "instructor": {"name": "Сидоров Сидр Сидорович", "age": 40, "car": "LADA Granta"}, "student": {"name": "Петров Петр Андреевич", "age": 24, "score": 6}}
 ]
