@@ -110,7 +110,7 @@ class TestExam(unittest.TestCase):
     Класс Exam должен принимать только объекты Instructor и Student
     """
     person = Person("N", 20)
-    instructor = Instructor("Inst", 30, "Car")
+    instructor = Instructor("Inst", age=30, car="Car")
     student = Student("Name", 20, 5)
     date = "11-11-2011T11:11"
 
